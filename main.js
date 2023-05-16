@@ -3,13 +3,13 @@ $(document).ready(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
 
-        const novaTarefa = $('#nova-tarefa').val();
+        const novaTarefa = $('.nova-tarefa').val();
         const novoItem = $('<li></li>');
         $(`${novaTarefa}`).appendTo(novoItem);
         $(novoItem).appendTo('ul');
         $('li').click(function () {
             $("li").css("text-decoration: line-through");
         });
-        $('#nova-tarefa').val('');
+        $('.nova-tarefa').val('');
     });
 });
